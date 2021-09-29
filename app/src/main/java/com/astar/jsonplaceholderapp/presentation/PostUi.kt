@@ -3,8 +3,9 @@ package com.astar.jsonplaceholderapp.presentation
 import com.astar.jsonplaceholderapp.core.Abstract
 
 sealed class PostUi : Abstract.Object<Unit, PostUi.StringMapper>() {
-
     override fun map(mapper: StringMapper) = Unit
+
+    object Progress : PostUi()
 
     class Base(
         private val userId: Int,
