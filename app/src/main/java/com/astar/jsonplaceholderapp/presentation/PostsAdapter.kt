@@ -1,5 +1,6 @@
 package com.astar.jsonplaceholderapp.presentation
 
+import android.annotation.SuppressLint
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -12,6 +13,7 @@ class PostsAdapter : RecyclerView.Adapter<PostsAdapter.PostViewHolder>() {
 
     private val items = ArrayList<PostUi>()
 
+    @SuppressLint("NotifyDataSetChanged")
     fun update(items: List<PostUi>) {
         this.items.clear()
         this.items.addAll(items)
@@ -35,6 +37,10 @@ class PostsAdapter : RecyclerView.Adapter<PostsAdapter.PostViewHolder>() {
     }
 
     override fun getItemCount() = items.size
+
+    private fun Int.makeView(parent: ViewGroup) = LayoutInflater
+        .from(parent.context)
+        .inflate(this, parent, false)
 
     abstract class PostViewHolder(view: View) : RecyclerView.ViewHolder(view) {
         open fun bind(post: PostUi) {}
@@ -68,6 +74,3 @@ class PostsAdapter : RecyclerView.Adapter<PostsAdapter.PostViewHolder>() {
         class FullScreenProgress(view: View) : PostViewHolder(view) {}
     }
 }
-
-private fun Int.makeView(parent: ViewGroup) =
-    LayoutInflater.from(parent.context).inflate(this, parent, false)

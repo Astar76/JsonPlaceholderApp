@@ -1,16 +1,15 @@
-package com.astar.jsonplaceholderapp
+package com.astar.jsonplaceholderapp.presentation
 
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
+import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.DividerItemDecoration
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.astar.jsonplaceholderapp.core.MainApp
 import com.astar.jsonplaceholderapp.databinding.ActivityMainBinding
-import com.astar.jsonplaceholderapp.presentation.PostsAdapter
 
-class Main1Activity : AppCompatActivity() {
+class MainActivity : AppCompatActivity() {
 
     private lateinit var binding: ActivityMainBinding
 

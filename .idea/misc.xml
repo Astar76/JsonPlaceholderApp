@@ -3,10 +3,7 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
-        <entry key="..\:/AndroidProjects/JsonPlaceholderApp/app/src/main/res/layout/activity_main.xml" value="0.1" />
-        <entry key="..\:/AndroidProjects/JsonPlaceholderApp/app/src/main/res/layout/item_error_fullscreen.xml" value="0.1" />
-        <entry key="..\:/AndroidProjects/JsonPlaceholderApp/app/src/main/res/layout/item_post.xml" value="0.1" />
-        <entry key="..\:/AndroidProjects/JsonPlaceholderApp/app/src/main/res/layout/item_progress.xml" value="0.1" />
+        <entry key="..\:/Users/Predator/AndroidStudioProjects/CleanArchExample/app/src/main/res/layout/item_post.xml" value="0.25416666666666665" />
       </map>
     </option>
   </component>

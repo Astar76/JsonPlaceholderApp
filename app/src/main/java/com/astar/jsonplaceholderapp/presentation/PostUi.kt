@@ -7,7 +7,7 @@ sealed class PostUi : Abstract.Object<Unit, PostUi.StringMapper>() {
 
     object Progress : PostUi()
 
-    class Base(
+    data class Base(
         private val userId: Int,
         private val title: String,
         private val body: String
@@ -17,7 +17,7 @@ sealed class PostUi : Abstract.Object<Unit, PostUi.StringMapper>() {
         }
     }
 
-    class Error(
+    data class Error(
         private val message: String
     ) : PostUi() {
         override fun map(mapper: StringMapper) {

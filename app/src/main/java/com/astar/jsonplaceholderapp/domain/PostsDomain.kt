@@ -19,13 +19,9 @@ sealed class PostsDomain : Abstract.Object<PostsUi, PostsDomainToUiMapper>() {
         }
     }
 
-    class Error(private val e: Exception) : PostsDomain() {
+    class Error(private val errorType: ErrorType) : PostsDomain() {
         override fun map(mapper: PostsDomainToUiMapper): PostsUi {
-            return mapper.map(when (e) {
-                is UnknownHostException -> ErrorType.NO_CONNECTION
-                is HttpException -> ErrorType.SERVICE_UNAVAILABLE
-                else -> ErrorType.GENERIC_ERROR
-            })
+            return mapper.map(errorType)
         }
     }
 }

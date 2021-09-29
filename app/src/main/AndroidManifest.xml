@@ -13,7 +13,7 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.JsonPlaceholderApp">
         <activity
-            android:name=".Main1Activity"
+            android:name=".presentation.MainActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
